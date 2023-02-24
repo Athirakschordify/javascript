@@ -7,8 +7,21 @@
            var amount, person, split;
            amount = parseInt(document.getElementById("amount").value);
            person = parseInt(document.getElementById("person").value);
-           split=amount/person;
+           if (amount<=0) 
+            {
+               alert("Please enter valid amount");
+            }
+            else if (person<=0) 
+            {
+               alert("Please enter valid number");
+            }
+            else
+            {
+            split=amount/person;
            document.getElementById("result").value =split;
+            }
+
+           
          }
       </script>
    </head>
