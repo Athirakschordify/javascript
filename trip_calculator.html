@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <head>
+      <script>
+         function split()
+         {
+           var amount, person, split;
+           amount = parseInt(document.getElementById("amount").value);
+           person = parseInt(document.getElementById("person").value);
+           split=amount/person;
+           document.getElementById("result").value =split;
+         }
+      </script>
+   </head>
+   <body style="background-color: darkcyan;">
+      <h2>Trip Calculator</h2>
+      <p>Total Amount For The Trip: <input id="amount"></p>
+      <p>Total Number Of Persons: <input id="person"></p>
+      <button onclick="split()">Split</button>
+      <p>Split Of Each Person = <input id="result"></p>
+   </body>
+</html>
