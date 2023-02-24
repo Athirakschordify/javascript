@@ -7,10 +7,23 @@
            var weight, height, bmi;
            weight= parseInt(document.getElementById("weight").value);
            height = parseInt(document.getElementById("height").value);
+           if (weight<=0) 
+            {
+               alert("Provide a valid  Weight");
+            }
+            else if (height<=0) 
+            {
+               alert("Provide a valid Height");
+            }
+            else
+            {
+
            bmi= (weight / height / height)*10000;
            document.getElementById("bmi").value = bmi;
-
-           if(bmi < 18.5)
+            }
+            if (bmi>=0)
+            {
+               if(bmi < 18.5)
            {
                    document.getElementById("message").value = "Underweight";
   
@@ -23,10 +36,20 @@
            {
            document.getElementById("message").value = "Over weight";
            }
+
           else
           {
           document.getElementById("message").value =  "Obesity";
           }
+            }
+
+
+         
+
+      
+
+
+           
        }
 
       </script>
